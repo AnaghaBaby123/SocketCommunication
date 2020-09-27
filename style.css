@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+
+    background: url(../assets/grocery.jpg) center fixed;
+    background-size: auto;
+    padding-top: 20px;
+    margin: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box{
+    align-content: center;
+    background-color: #ffd650;
+    width: auto;
+    height: 50%;
+    border: solid yellow;
+    padding: 20px;
+    margin: auto;
+}
+
+.image{
+    max-width: 20%;
+}
+
+.input{
+    max-width: 45%;
+}
+
+.thank{
+    margin: 10rem;
+}
+.table_1{
+float:left;
+}
+th, td {
+    padding: 5px 20px 5px 5px;
+    text-align: left;
+    border-bottom: 1px solid #000
+  }
+.container1{
+    margin:auto;
+    width:40%;
+    height:auto;
+}
+.login_frame{
+    margin-left:50px;
+    padding-left: 30%;
+}
