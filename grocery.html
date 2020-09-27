@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Priya Supermarket</title>
+</head>
+<body>
+    <div class="box">
+       
+        <center>
+        <h1>Welcome to PRIYA!</h1>
+        <br>
+        <br>
+        </center>
+        <div class="container1">
+            <br>
+            <table class="table_1">
+                <h2 style="width: 300px;">Price List</h2>
+                <tr>
+                    <th>ITEM</th>
+                    <th>PRICE(Per Kg)</th>
+                </tr>
+                <tr>
+                    <td>Tomato</td>
+                    <td>20Rs</td>
+                </tr>
+                <tr>
+                    <td>Onion</td>
+                    <td>40Rs</td>
+                </tr>
+                <tr>
+                    <td>Carrot</td>
+                    <td>10Rs</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>45Rs</td>
+                </tr>
+                <tr>
+                    <td>Potato</td>
+                    <td>10Rs</td>
+                </tr>
+            </table>
+            <br>
+            <div class="login_frame">
+                <h3>Please enter the item you want</h3><br>
+                <form action="/" method="POST">
+                    <div class="col-xs-3">
+                        <p style="color: red;">{{ message }}</p>
+                        <input id="input" class="form-control input" type="text" placeholder="Item you need" name="grocery_item" onkeyup="btnSubmit()">
+                    </div>
+
+                    <br>
+                    <button id="submit" type="submit" class="btn btn-primary mb-2" value="check_id" disabled="disabled">Submit</button>
+                </form>
+            </div>
+        <br>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function btnSubmit(){
+            const button = document.getElementById('submit')
+            if (document.getElementById('input').value == "") {
+                button.disabled = true
+            }
+            else {
+                button.disabled = false
+            }
+        }
+    </script>
+
+</body>
+</html>
